@@ -8,8 +8,8 @@
     "start": "next start",
     "lint:pages": "eslint pages/*.js",
     "lint:components": "eslint components/*.js*",
-    "lint": "npm run lint:pages && npm run lint:components",
-    "pretest": "npm run lint 2> /dev/null",
+    "lint": "yarn run lint:pages && yarn run lint:components",
+    "pretest": "yarn run lint 2> /dev/null",
     "test": "echo 'No tests created'"
   },
   "dependencies": {
