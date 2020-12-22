@@ -1,5 +1,4 @@
 {
-  "parser": "eslint",
   "parserOptions": {
     "ecmaVersion": 8,
     "sourceType": "module",
@@ -100,6 +99,7 @@
     ],
     "array-bracket-spacing": "error",
     "eol-last": "error",
-    "react/prop-types": [2, { "skipUndeclared": true }]
+    "react/prop-types": [2, { "skipUndeclared": true }],
+    "react/react-in-jsx-scope": 0
   }
 }
