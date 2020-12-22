@@ -5,7 +5,12 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint:pages": "eslint pages/*.js",
+    "lint:components": "eslint components/*.js*",
+    "lint": "npm run lint:pages && npm run lint:components",
+    "pretest": "npm run lint 2> /dev/null",
+    "test": "echo 'No tests created'"
   },
   "dependencies": {
     "next": "10.0.3",
