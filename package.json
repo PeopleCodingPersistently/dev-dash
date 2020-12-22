@@ -5,11 +5,23 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p $PORT"
+    "start": "next start -p $PORT",
+    "lint:pages": "eslint pages/*.js",
+    "lint:pages:watch": "esw -w --clear pages/*.js",
+    "lint:components": "eslint components/*.js*",
+    "lint:components:watch": "esw -w --clear components/*.js",
+    "lint": "yarn run lint:pages && yarn run lint:components",
+    "pretest": "yarn run lint 2> /dev/null",
+    "test": "echo 'No tests created'"
   },
   "dependencies": {
     "next": "10.0.3",
     "react": "17.0.1",
     "react-dom": "17.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-watch": "^7.0.0"
   }
 }
