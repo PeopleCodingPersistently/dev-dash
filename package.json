@@ -12,8 +12,8 @@
     "lint:components:watch": "esw -w --clear components/*.js",
     "lint": "yarn run lint:pages && yarn run lint:components",
     "pretest": "yarn run lint 2> /dev/null",
-    "test": "yarn test",
-    "test:watch": "yarn test --watch --coverage"
+    "test": "yarn jest",
+    "test:watch": "yarn jest --watch --coverage"
   },
   "dependencies": {
     "next": "10.0.3",
