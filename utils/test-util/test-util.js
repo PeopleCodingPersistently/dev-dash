@@ -1,3 +1,3 @@
 export const speakFriend = () => {
-  return 'Friendshipss';
+  return 'Friend';
 };
