@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 
 export default function Home() {
   const { pathname } = useRouter();
-  const { isAuthenticated, isLoading, accessToken, login, logout } = useAuth();
+  const { isAuthenticated, isLoading, login, logout } = useAuth();
 
   if(!isAuthenticated && !isLoading) {
     return (
