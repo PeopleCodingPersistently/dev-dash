@@ -6,6 +6,8 @@ export default function Home() {
   const { pathname } = useRouter();
   const { isAuthenticated, isLoading, login, logout } = useAuth();
 
+  console.log('IS AUTH', isAuthenticated);
+
   if(!isAuthenticated && !isLoading) {
     return (
       <button onClick={() => login({ appstate: { pathname } })}>Login</button>
