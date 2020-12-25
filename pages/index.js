@@ -1,12 +1,8 @@
 import Head from 'next/head';
 import { signIn, signOut, useSession } from 'next-auth/client';
-import { useRouter } from 'next/router';
 
 export default function Home() {
-  const { pathname } = useRouter();
-  const [session, loading] = useSession();
-
-  console.log('SESSION', session, signOut);
+  const [session] = useSession();
 
   return (
     <>
@@ -22,7 +18,7 @@ export default function Home() {
       {session && (
         <div>
           <h3>You are signed in as {session?.user?.name}</h3>
-          <button onClick={() => signOut({ callbackUrl: 'http://localhost:3000'})}>Sign Out</button>
+          <button onClick={() => signOut({ callbackUrl: 'http://localhost:3000' })}>Sign Out</button>
         </div>
       )}
     </>
