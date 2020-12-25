@@ -1,12 +1,12 @@
-import Head from "next/head";
-import { signIn, signOut, useSession } from "next-auth/client";
-import { useRouter } from "next/router";
+import Head from 'next/head';
+import { signIn, signOut, useSession } from 'next-auth/client';
+import { useRouter } from 'next/router';
 
 export default function Home() {
   const { pathname } = useRouter();
   const [session, loading] = useSession();
 
-  console.log("SESSION", session, signOut);
+  console.log('SESSION', session, signOut);
 
   return (
     <>
