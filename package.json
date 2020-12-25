@@ -13,7 +13,8 @@
     "lint": "yarn run lint:pages && yarn run lint:components",
     "pretest": "yarn run lint 2> /dev/null",
     "test": "yarn jest",
-    "test:watch": "yarn jest --watch --coverage"
+    "test:watch": "yarn jest --watch --coverage",
+    "sql_init:users": "node ./bash_scripts/sql_init_users.js"
   },
   "dependencies": {
     "dotenv": "^8.2.0",
