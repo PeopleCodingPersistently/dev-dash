@@ -1,12 +1,12 @@
 import Head from "next/head";
-import { signIn, signOut, useSession } from 'next-auth/client'
+import { signIn, signOut, useSession } from "next-auth/client";
 import { useRouter } from "next/router";
 
 export default function Home() {
   const { pathname } = useRouter();
   const [session, loading] = useSession();
 
-  console.log('USER', session?.user);
+  console.log("USER", session?.user);
 
   return (
     <>
@@ -19,12 +19,12 @@ export default function Home() {
           <button onClick={signIn}>Sign In</button>
         </div>
       )}
-      {(session && !loading) && (
+      {session && !loading && (
         <div>
           <h3>You are signed in as {session?.user?.name}</h3>
+          <button onClick={signOut}>Sign Out</button>
         </div>
-      )
-      }
+      )}
     </>
   );
 }

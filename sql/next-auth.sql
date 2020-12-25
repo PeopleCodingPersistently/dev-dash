@@ -1,3 +1,8 @@
+DROP TABLE IF EXISTS accounts CASCADE;
+DROP TABLE IF EXISTS sessions CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
+DROP TABLE IF EXISTS verification_requests;
+
 CREATE TABLE accounts
   (
     id                   SERIAL,
