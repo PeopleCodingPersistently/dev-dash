@@ -6,7 +6,7 @@ export default function Home() {
   const { pathname } = useRouter();
   const [session, loading] = useSession();
 
-  console.log("USER", session?.user);
+  console.log("SESSION", session, signOut);
 
   return (
     <>
@@ -19,10 +19,10 @@ export default function Home() {
           <button onClick={signIn}>Sign In</button>
         </div>
       )}
-      {session && !loading && (
+      {session && (
         <div>
           <h3>You are signed in as {session?.user?.name}</h3>
-          <button onClick={signOut}>Sign Out</button>
+          <button onClick={() => signOut({ callbackUrl: 'http://localhost:3000'})}>Sign Out</button>
         </div>
       )}
     </>
