@@ -24,7 +24,8 @@
     "next-auth": "^3.1.0",
     "pg": "^8.5.1",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-draggable": "^4.4.3"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
