@@ -4,5 +4,9 @@ import Test from './Test';
 
 export default {
   title: 'Example/Test',
-  component: Test,
+  component: Test
 };
+
+const Template = (args) => <Test {...args} />;
+
+export const Default = Template.bind({});
